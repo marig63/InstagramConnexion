@@ -64,9 +64,9 @@ public class InstagramUsernameUtils {
                     Log.e("response",json.toString());
                     JSONObject jsonData = json.getJSONObject("data");
                     if(jsonData.has("id")){
-                        String username = jsonData.getString("username");
-                        Log.e("username",username);
-                        listener.onUsernameReceived(username);
+                        String username = jsonData.getString("id");
+
+                        listener.onUsernameReceived(username,token);
                         // send request to server : saving username
                     }
                 }catch (JSONException e){

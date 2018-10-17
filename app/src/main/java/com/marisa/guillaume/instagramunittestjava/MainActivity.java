@@ -44,10 +44,12 @@ public class MainActivity extends AppCompatActivity implements InstaAuthListener
     }
 
     @Override
-    public void onUsernameReceived(String username) {
+    public void onUsernameReceived(String username,String token) {
         //tv.setText(username);
         // send save request
         // ->
+        Log.e("id",username);
+        Log.e("token",token);
     }
 
     public void onClick(View view){
